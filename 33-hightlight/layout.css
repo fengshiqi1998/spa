@@ -1,0 +1,22 @@
+body, html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 70%;
+}
+
+div {
+  position: relative;
+}
+
+pre+i {
+  color: gray;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+pre+i:hover {
+  color: #fff;
+  cursor: pointer;
+}
