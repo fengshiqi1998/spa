@@ -6,28 +6,60 @@
   <link rel="stylesheet" href="layout.css">
   <link rel="icon" href="https://i.wangding.in/favicon.ico" sizes="48x48" type="image/png">
   <style>
+/*
   .main {
     background: green;
     height: 200px;
     margin: 0 auto;
     width: 200px;
-  }
+  }*/
   </style>
 </head>
 <body>
-<input type="button" value="add_timer_btn" class="add-btn">
-<input type="button" value="del_timer-btn" class="del-btn">
-<div class="main"></div>
+<input type="button" value="add_timer_btn1" class="add-btn1">
+<input type="button" value="add_timer_btn2" class="add-btn2">
+<!--<input type="button" value="del_timer-btn" class="del-btn">-->
+<div class="main1"></div>
+<div class="main2"></div>
 <script src="//apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 <script src="main.js"></script>
 <script>
   $(function() {
+      /*
     $('.add-btn').click(function() {
-      $timerBtn.init();
+      var btn = $timerBtn.init({
+        title: '发送验证',
+        time: 6
+      });
+      btn.on('timer-btn-click', function() {
+        alert('hello');
+      });
     });
+    */
+    $('.add-btn1').click(function() {
+      var btn1 = new TimerBtn();
+      btn1.init({
+        container: '.main1',
+        title: '发送验证码',
+        time: 9,
+        clickHandler: function() { alert('btn1 click') }
+      });
+    });
+
+    $('.add-btn2').click(function() {
+      var btn2 = new TimerBtn();
+      btn2.init({
+        container: '.main2',
+        title: '确定',
+        time: 6,
+        clickHandler: function() { alert('btn2 click') }
+      });
+    });
+    /*
     $('.del-btn').click(function() {
       $timerBtn.remove();
     });
+    */
   });
 </script>
 </body>
