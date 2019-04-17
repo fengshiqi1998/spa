@@ -16,7 +16,11 @@
 $(function() {
     $btnPopup = $('.popup');
     $btnPopup.click(function() {
-      $dlgGoto.init();
+      $dlgGoto.init({
+        curLine: 3,
+        totalLines: 5,
+        gotoHandler: function(e) { console.log('goto btn clicked! and goto %s', e) }
+      });
     });
 });
 </script>
